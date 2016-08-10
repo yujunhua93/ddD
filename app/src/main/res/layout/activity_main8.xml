@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.e450c.myapplicationdemo.activity.Main8Activity">
+
+
+    <com.example.e450c.myapplicationdemo.widgets.MyScrollerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_height="300dip"
+                android:layout_width="match_parent"
+                android:background="@drawable/banner3"
+
+                />
+            <com.example.e450c.myapplicationdemo.widgets.NoScrollListview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.example.e450c.myapplicationdemo.widgets.NoScrollListview>
+        </LinearLayout>
+    </com.example.e450c.myapplicationdemo.widgets.MyScrollerView>
+    <TextView
+        android:paddingBottom="10dp"
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center|bottom"
+        android:text="我是标题"
+        android:textSize="18sp"
+        android:background="#00000000" />
+</RelativeLayout>

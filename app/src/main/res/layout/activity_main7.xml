@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.e450c.myapplicationdemo.activity.Main7Activity">
+
+    <com.example.e450c.myapplicationdemo.widgets.ScratchView
+        android:layout_width="300dip"
+        android:layout_height="300dip"
+        app:outter_bg="@drawable/ic_delete_01"
+        />
+
+</RelativeLayout>
