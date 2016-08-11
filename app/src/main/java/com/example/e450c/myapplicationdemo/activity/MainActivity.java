@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
 //                intent.setClass(MainActivity.this,TabActivity.class);
-                intent.setClass(MainActivity.this,Main7Activity.class);
+                intent.setClass(MainActivity.this,Main9Activity.class);
                 startActivity(intent);
 //                password_et.setError("错误的显示");
             }

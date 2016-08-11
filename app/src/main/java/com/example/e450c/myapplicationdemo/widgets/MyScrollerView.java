@@ -2,11 +2,12 @@ package com.example.e450c.myapplicationdemo.widgets;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.ScrollView;
 
 /**
  * Created by e450c on 2016/8/10.
  */
-public class MyScrollerView extends  ScratchView {
+public class MyScrollerView extends ScrollView{
 
     public interface  ScrollViewListener{
 
@@ -25,8 +26,15 @@ public class MyScrollerView extends  ScratchView {
         super(context, attrs);
     }
 
+    public void setScrollViewListener(ScrollViewListener scrollViewListener) {
+        this.scrollViewListener = scrollViewListener;
+    }
+
     public MyScrollerView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+
+
+
     }
 
     @Override

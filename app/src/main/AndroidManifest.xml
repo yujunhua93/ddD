@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <!-- To access Google+ APIs: -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -49,7 +49,8 @@
         <activity android:name=".activity.Main5Activity" />
         <activity android:name=".activity.Main6Activity" />
         <activity android:name=".activity.Main7Activity" />
-        <activity android:name=".activity.Main8Activity"></activity>
+        <activity android:name=".activity.Main8Activity" />
+        <activity android:name=".activity.Main9Activity"></activity>
     </application>
 
 </manifest>
