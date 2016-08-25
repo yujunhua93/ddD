@@ -35,8 +35,8 @@ public class TabActivity extends AppCompatActivity {
         }
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 
-        BlankFragment f1 = BlankFragment.newInstance("1","2");
-        BlankFragment2 f2  = BlankFragment2.newInstance("3","4");
+//        BlankFragment f1 = BlankFragment.newInstance("1","2");
+//        BlankFragment2 f2  = BlankFragment2.newInstance("3","4");
         ViewPagerAdapter viewPager= new ViewPagerAdapter(getSupportFragmentManager(),this,fragmentList,list);
         vp.setAdapter(viewPager);
         tabLayout.setupWithViewPager(vp);

@@ -1,5 +1,6 @@
 package com.example.e450c.myapplicationdemo.activity;
 
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -8,14 +9,17 @@ import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.example.e450c.myapplicationdemo.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.concurrent.locks.ReadWriteLock;
 
-public class Main9Activity extends AppCompatActivity {
+public class Main9Activity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
 
     private ViewPager viewPager;
 
@@ -23,12 +27,17 @@ public class Main9Activity extends AppCompatActivity {
 
     private MyPagerAdapter myPagerAdapter;
 
+    private Button btn;
+
+    private RelativeLayout rl;
     private ArrayList<String> titles = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main9);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
+        btn = (Button) findViewById(R.id.lastbtn);
+        rl = (RelativeLayout) findViewById(R.id.rl);
         pages = new ArrayList<View>();
         titles = new ArrayList<String>();
         titles.add("第一个标题");
@@ -57,6 +66,29 @@ public class Main9Activity extends AppCompatActivity {
         pages.add(view4);
         myPagerAdapter = new MyPagerAdapter();
         viewPager.setAdapter(myPagerAdapter);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(rl,"show",Snackbar.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+            if (position == pages.size()-1){
+                btn.setVisibility(View.VISIBLE);
+            }
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
     }
 
     class MyPagerAdapter extends PagerAdapter{

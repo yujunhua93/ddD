@@ -14,23 +14,25 @@ import com.example.e450c.myapplicationdemo.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link BlankFragment2.OnFragmentInteractionListener} interface
+ * {@link BlankFragment3.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link BlankFragment2#newInstance} factory method to
+ * Use the {@link BlankFragment3#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BlankFragment2 extends Fragment {
+public class BlankFragment3 extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
 
-    public BlankFragment2() {
+
+
+    public BlankFragment3() {
         // Required empty public constructor
     }
 
 
-    public static BlankFragment2 newInstance() {
-        BlankFragment2 fragment = new BlankFragment2();
+    public static BlankFragment3 newInstance() {
+        BlankFragment3 fragment = new BlankFragment3();
 
         return fragment;
     }
@@ -45,7 +47,7 @@ public class BlankFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank_fragment2, container, false);
+        return inflater.inflate(R.layout.fragment_blank_fragment3, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

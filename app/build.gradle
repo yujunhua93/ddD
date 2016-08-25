@@ -10,6 +10,9 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
     }
     buildTypes {
         release {
@@ -28,4 +31,6 @@ dependencies {
     compile 'com.google.android.gms:play-services:9.0.2'
     compile files('libs/HwPush_SDK_V2705.jar')
     compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile"com.facebook.react:react-native:+"
 }
