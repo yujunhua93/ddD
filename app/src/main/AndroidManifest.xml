@@ -61,7 +61,9 @@
             android:screenOrientation="landscape" />
         <activity android:name=".activity.Main15Activity" />
         <activity android:name=".activity.Main16Activity" />
-        <activity android:name=".activity.Main17Activity"></activity>
+        <activity android:name=".activity.Main17Activity" />
+        <activity android:name=".activity.Main18Activity" />
+        <activity android:name=".activity.Main19Activity"></activity>
     </application>
 
 </manifest>

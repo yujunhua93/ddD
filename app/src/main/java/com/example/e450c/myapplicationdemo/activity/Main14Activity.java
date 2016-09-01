@@ -11,32 +11,41 @@ import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.e450c.myapplicationdemo.R;
 import com.example.e450c.myapplicationdemo.widgets.BlurBitmap;
+import com.example.e450c.myapplicationdemo.widgets.StyleImageView;
+import com.example.e450c.myapplicationdemo.widgets.Styler;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 public class Main14Activity extends AppCompatActivity {
-    private ImageView imageview;
+    private StyleImageView imageview;
     private Bitmap mTempBitmap;
     private Bitmap finalTempBitmap;
+
     @InjectView(R.id.iv2_14)
     ImageView imageview2;
     @InjectView(R.id.iv3_14)
     ImageView imageview3;
+    @InjectView(R.id.iv4_14)
+    ImageView imageview4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main14);
         ButterKnife.inject(this);
-        imageview = (ImageView) findViewById(R.id.iv_14);
-        mTempBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.loading);
-        finalTempBitmap = BlurBitmap.blur(this,mTempBitmap);
-        imageview.setImageBitmap(finalTempBitmap);
+        imageview = (StyleImageView)findViewById(R.id.iv_14);
+//        mTempBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.loading);
+//        finalTempBitmap = BlurBitmap.blur(this,mTempBitmap);
+//        imageview.setImageBitmap(finalTempBitmap);
+        Glide.with(this).load("http://img1.3lian.com/2015/w4/17/d/64.gif").placeholder(R.drawable.banner1).into(imageview4);
+        imageview.setMode(Styler.Mode.SEPIA).setBrightness(50).setContrast(0.8f).enableAnimation(500L,new LinearInterpolator()).updateStyle();
         RoundedBitmapDrawable drawableA = RoundedBitmapDrawableFactory.create(getResources(),id2Bitmap(this,R.drawable.loading));
         drawableA.setCircular(true);
         imageview2.setImageDrawable(drawableA);

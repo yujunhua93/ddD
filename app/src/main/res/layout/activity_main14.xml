@@ -5,16 +5,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.e450c.myapplicationdemo.activity.Main14Activity">
-    <ImageView
+    <com.example.e450c.myapplicationdemo.widgets.StyleImageView
     android:id="@+id/iv_14"
     android:layout_width="70dip"
-    android:layout_height="70dip" />
+    android:layout_height="70dip"
+        android:src="@drawable/loading"
+        />
     <ImageView
         android:id="@+id/iv2_14"
         android:layout_width="50dip"
         android:layout_height="50dip" />
-    <ImageView
-        android:id="@+id/iv3_14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv3_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv4_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+
+
 </LinearLayout>
