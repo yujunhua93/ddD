@@ -63,7 +63,16 @@
         <activity android:name=".activity.Main16Activity" />
         <activity android:name=".activity.Main17Activity" />
         <activity android:name=".activity.Main18Activity" />
-        <activity android:name=".activity.Main19Activity"></activity>
+        <activity android:name=".activity.Main19Activity" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="560924e8e0f55a43e3001fde" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value=" f35144434494e0f1b7df6d83ceeec098" />
+        // 这个UMENG_CHANNEL用来标识APP的推广渠道，作为推送消息时给用户分组的一个维度，可加可不加
+        <activity android:name=".activity.Main20Activity"></activity>
     </application>
 
 </manifest>

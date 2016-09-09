@@ -11,6 +11,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -86,9 +87,21 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+//    @Override
+//    public void onBackPressed() {
+//        Toast.makeText(MainActivity.this,"点击了返回按钮",Toast.LENGTH_SHORT).show();
+//        super.onBackPressed();
+//    }
+
+
     @Override
-    public void onBackPressed() {
-        Toast.makeText(MainActivity.this,"点击了返回按钮",Toast.LENGTH_SHORT).show();
-        super.onBackPressed();
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK){
+            moveTaskToBack(true);
+        }
+        return super.onKeyDown(keyCode, event);
+
+
+
     }
 }
